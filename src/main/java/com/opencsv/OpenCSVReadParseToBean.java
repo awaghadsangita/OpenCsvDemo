@@ -27,7 +27,7 @@ public class OpenCSVReadParseToBean {
                 CSVUser csvUser = csvUserIterator.next();
                 System.out.println("Name : " + csvUser.getName());
                 System.out.println("Email : " + csvUser.getEmail());
-                System.out.println("PhoneNo : " + csvUser.getPhoneNo());
+                System.out.println("PhoneNo : " + csvUser.getPhone());
                 System.out.println("Country : " + csvUser.getCountry());
                 System.out.println("==========================");
             }

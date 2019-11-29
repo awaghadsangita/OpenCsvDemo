@@ -4,7 +4,7 @@ public class MyUser {
 
         private String name;
         private String email;
-        private String phoneNo;
+        private String phone;
         private String country;
 
         public MyUser() {
@@ -14,7 +14,7 @@ public class MyUser {
         public MyUser(String name, String email, String phoneNo, String country) {
             this.name = name;
             this.email = email;
-            this.phoneNo = phoneNo;
+            this.phone = phoneNo;
             this.country = country;
         }
 

@@ -8,15 +8,15 @@ public class CSVUser {
     @CsvBindByName(column = "email", required = true)
     private String email;
     @CsvBindByName(column = "phone")
-    private String phoneNo;
+    private String phone;
     @CsvBindByName
     private String country;
-    public CSVUser(String name, String email, String phoneNo, String country) {
-        this.name = name;
-        this.email = email;
-        this.phoneNo = phoneNo;
-        this.country = country;
-    }
+//    public CSVUser(String name, String email, String phone, String country) {
+//        this.name = name;
+//        this.email = email;
+//        this.phone = phone;
+//        this.country = country;
+//    }
     public String getName() {
         return name;
     }
@@ -25,8 +25,8 @@ public class CSVUser {
         return email;
     }
 
-    public String getPhoneNo() {
-        return phoneNo;
+    public String getPhone() {
+        return phone;
     }
 
     public String getCountry() {
@@ -41,8 +41,8 @@ public class CSVUser {
         this.email = email;
     }
 
-    public void setPhoneNo(String phoneNo) {
-        this.phoneNo = phoneNo;
+    public void setPhone(String phoneNo) {
+        this.phone = phoneNo;
     }
 
     public void setCountry(String country) {
