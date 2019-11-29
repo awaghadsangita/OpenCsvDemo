@@ -13,7 +13,25 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class OpenCSVWriter {
+    private static final String OBJECT_LIST_SAMPLE = "/home/admin1/IdeaProjects/OpenCSVProject/src/main/resources/string-array-sample.json";
+    public static void main(String[] args) throws IOException,
+            CsvDataTypeMismatchException,
+            CsvRequiredFieldEmptyException {
 
+        try (
+                Writer writer = Files.newBufferedWriter(Paths.get(OBJECT_LIST_SAMPLE));
+        ) {
+            StatefulBeanToCsv<MyUser> beanToCsv = new StatefulBeanToCsvBuilder(writer)
+                    .withQuotechar(CSVWriter.NO_QUOTE_CHARACTER)
+                    .build();
+
+            List<MyUser> myUsers = new ArrayList<>();
+            myUsers.add(new MyUser("Sundar Pichai ♥", "sundar.pichai@gmail.com", "+1-1111111111", "India"));
+            myUsers.add(new MyUser("Satya Nadella", "satya.nadella@outlook.com", "+1-1111111112", "India"));
+
+            beanToCsv.write(myUsers);
+        }
+    }
 
  }
 
